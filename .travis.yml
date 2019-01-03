@@ -32,7 +32,7 @@ before_deploy:
 - git config --local user.name $USER_TRAVIS
 - git config --local user.email $EMAIL_TRAVIS
 - export YEAR=`date +"%Y"`  
-- export GIT_TAG=v2.0.$TRAVIS_BUILD_NUMBER-$YEAR
+- export GIT_TAG=v$MILESTONE_TRAVIS.0.$TRAVIS_BUILD_NUMBER-$YEAR
 - git tag -a $GIT_TAG -m "Generated tag from TravisCI build $TRAVIS_BUILD_NUMBER"
 
 deploy:
@@ -54,3 +54,4 @@ branches:
   - master
   - develop
   - if [[ $RAMA_TRAVIS != "master" ]]; then $RAMA_TRAVIS; fi
+  - if [[ $TODAS_RAMAS ]]; /.*/; fi
