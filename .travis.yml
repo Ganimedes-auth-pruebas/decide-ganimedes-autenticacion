@@ -25,7 +25,7 @@ script:
   - python ./decide/manage.py makemigrations
   - python ./decide/manage.py migrate
 #  - python ./decide/manage.py compilemessages
-#  - python ./decide/manage.py test ./decide
+#c  - python ./decide/manage.py test ./decide
   - if [[ $TRAVIS_BRANCH == "master" ]] && [[ $DEPLOY_TRAVIS == "1" ]]; then git archive --format zip --output ./decide.zip master; echo "perfecto"; fi
 
 before_deploy:
