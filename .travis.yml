@@ -26,7 +26,7 @@ script:
   - python ./decide/manage.py migrate
 #  - python ./decide/manage.py compilemessages
 #c  - python ./decide/manage.py test ./decide
-  - if [[ $TRAVIS_BRANCH == "master" ]] && [[ $DEPLOY_TRAVIS == "1" ]]; then git archive --format zip --output ./decide.zip master; echo "perfecto"; fi
+  - if [[ $TRAVIS_BRANCH == $RAMA_TRAVIS ]] && [[ $DEPLOY_TRAVIS == "1" ]]; then git archive --format zip --output ./$NOMBRE_ZIP.zip $RAMA_TRAVIS; echo "Zip generado correctamente."; fi
 
 before_deploy:
 - git config --local user.name $USER_TRAVIS
@@ -39,10 +39,10 @@ deploy:
   provider: releases
   api-key:
     secure: $TOKEN_TRAVIS
-  file: "./decide.zip"
+  file: "./$NOMBRE_ZIP.zip"
   skip_cleanup: true
   on:
-    branch: master
+    branch: $RAMA_TRAVIS
     condition: $DEPLOY_TRAVIS = 1
     tags: false
 
@@ -53,3 +53,4 @@ branches:
   only:
   - master
   - develop
+  - if [[ $RAMA_TRAVIS != "master" ]]; then $RAMA_TRAVIS; fi
