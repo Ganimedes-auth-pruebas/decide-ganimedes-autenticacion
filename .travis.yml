@@ -38,7 +38,7 @@ before_deploy:
 deploy:
   provider: releases
   api-key:
-    secure: $TOKEN_TRAVIS_2
+    secure: $TOKEN_TRAVIS
   file: "./decide.zip"
   skip_cleanup: true
   on:
