@@ -49,9 +49,9 @@ deploy:
 notifications:
   email: false
       
-branches:
-  only:
-  - master
-  - develop
-  - if [[ $RAMA_TRAVIS != "master" ]]; then $RAMA_TRAVIS; fi
-  - if [[ $TODAS_RAMAS ]]; /.*/; fi
+# branches:
+#   only:
+#   - master
+#   - develop
+#   - if [[ $RAMA_TRAVIS != "master" ]]; then $RAMA_TRAVIS; fi
+#   - if [[ $TODAS_RAMAS ]]; /.*/; fi
