@@ -113,9 +113,7 @@ msgstr "Nuev@ usuari@"
 
 #: authentication/templates/authentication/acc_active_email.html:9
 msgid "Thank you for your email confirmation. Now you can login your account."
-msgstr ""
-"Gracias por la confirmación del correo electrónico. Ahora puedes iniciar la "
-"sesión de tu cuenta."
+msgstr "Gracias por la confirmación del correo electrónico.\n Ahora puedes iniciar la sesión de tu cuenta."
 
 #: authentication/templates/authentication/acc_active_email.html:11
 msgid "Go to login"
@@ -123,9 +121,7 @@ msgstr "Iniciar sesión"
 
 #: authentication/templates/authentication/confirm_email.html:7
 msgid "Please confirm your email address to complete the registration"
-msgstr ""
-"Por favor, confirme su dirección de correo electrónico para completar el "
-"registro"
+msgstr "Por favor, confirme su dirección de correo electrónico para completar el registro"
 
 #: authentication/templates/authentication/login.html:25
 #: base/templates/base.html:113
